@@ -1,5 +1,12 @@
 <?php
 
+
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SatNightPartyController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\BeatmixController;
+use App\Http\Controllers\AboutController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,9 +18,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
@@ -57,3 +61,8 @@ Route::group([
         });
     });
 });
+Route::get('/', [SatNightPartyController::class, 'index2'])->name('index');
+Route::get('sat_night', [SatNightPartyController::class, 'index'])->name('sat_night');
+Route::get('blog', [BlogController::class, 'index'])->name('blog');
+Route::get('beatmixx', [BeatmixController::class, 'index'])->name('beatmixx');
+Route::get('about', [AboutController::class, 'index'])->name('about');
