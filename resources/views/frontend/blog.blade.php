@@ -13,7 +13,7 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
           <div class="item active">
-            <img alt="img" src="images/comming-soon.jpg">
+            <img alt="img" src="{{asset('images/comming-soon.jpg')}}">
             <div class="carousel-caption">
               <div class="container">
                 <div class="row">
@@ -83,8 +83,8 @@
       </div>
     </footer>
     <!--Footer Content End-->
-    <script src="js/all.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="{{asset('js/all.js')}}"></script>
+    <script src="{{asset('js/jquery.slicknav.js')}}"></script>
+    <script src="{{asset('js/custom.js')}}"></script>
   </body>
 </html>

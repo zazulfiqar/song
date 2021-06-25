@@ -185,7 +185,7 @@ li,ul{
 }
 
 #navigation {
-  background: #0e1a35;
+  background: #e1e1e1;
 }
 
 #navigation {
@@ -355,7 +355,7 @@ header {
 .navi a {
   border-bottom: 1px solid #0d172e;
   border-top: 1px solid #0d172e;
-  color: #ffffff;
+  color: #2a2a2a;
   display: block;
   font-size: 17px;
   font-weight: 500;
@@ -369,16 +369,18 @@ header {
 }
 
 .navi .active a {
-  background: #122143;
+  background: #ffffff;
   border-left: 5px solid #5584ff;
   padding-left: 15px;
 }
 
 .navi a:hover {
-  background: #122143 none repeat scroll 0 0;
-  border-left: 5px solid #5584ff;
+  background: #ababab none repeat scroll 0 0;
+  border-left: 5px solid #000000;
   display: block;
   padding-left: 15px;
+  color: black;
+  text-decoration: none;
 }
 
 .navbar-default {
