@@ -6,6 +6,7 @@ use App\Http\Controllers\SatNightPartyController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\BeatmixController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\BeatmixsongsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,7 @@ use App\Http\Controllers\AboutController;
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('betmixsongs', [BeatmixsongsController::class, 'index'])->name('betmixsongs');
 
 
 
@@ -35,6 +37,8 @@ Route::group([
     ]);
 
     Route::middleware('auth:admin')->group(function() {
+     
+        
         Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
         Route::middleware('role')->group(function() {
@@ -58,6 +62,8 @@ Route::group([
                 ->name('users.password.change');
             Route::post('users/{user}/password/change', 'UserController@updatePassword')
                 ->name('users.password.update');
+                
+               
         });
     });
 });
