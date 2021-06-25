@@ -9,11 +9,11 @@
     <div class="container-fluid display-table">
         <div class="row display-table-row">
             <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
-                @include('layouts.sidebar');
+                @include('layouts.sidebar')
             </div>
             <div class="col-md-10 col-sm-11 display-table-cell v-align">
                 <!--<button type="button" class="slide-toggle">Slide Toggle</button> -->
-                @include('layouts.header');
+                @include('layouts.header')
                 <div class="user-dashboard">
                     <h1>Hello,  {{ Auth::user()->name }} </h1>
                     <div class="row">
