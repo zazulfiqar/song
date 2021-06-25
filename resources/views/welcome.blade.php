@@ -95,7 +95,7 @@
                   <img src="{{asset('images/world_icon1.png')}}" alt="img">
                   <h4>Jetjams Robic</h4>
                   <p>Take your aerobic exercise program to a new level with high BPM 20 - 40 - 60 minute</p>
-                  <a href="robic.html" class="gradient_btn">READ MORE</a>
+                  <a href="{{asset('robic.html')}}" class="gradient_btn">READ MORE</a>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 col-xs-12">
@@ -213,7 +213,7 @@
             <div class="">
               <div class="Download_Box">
                 <div class="Download_BoxImg">
-                  <img src="images/download_img1.jpg" alt="img">
+                  <img src="{{asset('images/download_img1.jpg')}}" alt="img">
                 </div>
                 <div class="Download_BoxText">
                   <h3>Saturday Nite Party <br>Beatmixed Sets</h3>
@@ -245,7 +245,7 @@
                   <h3>Jetjams Robic Beatmixed <br>Sets (novice & intermediate)</h3>
                 </div>
                 <div class="Download_BoxIcon">
-                  <a data-fancybox="gallery" href="{{asset('images/download_img3.jpg')}}"><img src="images/paly_btn.png" alt="img"></a>
+                  <a data-fancybox="gallery" href="{{asset('images/download_img3.jpg')}}"><img src="{{asset('images/paly_btn.png')}}" alt="img"></a>
                 </div>
               </div>
             </div>
@@ -325,7 +325,7 @@
               <p>Cras mattis consectetur purus sit amet.</p>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-12 text-center">
-              <a href="member-mbi.html">Member BMI & ASCAP</a>
+              <a href="{{asset('member-mbi.html')}}">Member BMI & ASCAP</a>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-12">
               <ul>
