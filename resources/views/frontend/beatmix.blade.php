@@ -124,7 +124,14 @@
               </form>
               </div>
               <ul>
-                <li><i class="fa fa-music" aria-hidden="true"></i> BMIX 051621 BPM124 <a href="JavaScript:void(0)">Purchase Now</a></li>
+
+                @foreach($data as $fetch)
+                <li><i class="fa fa-music" aria-hidden="true"></i> {{$fetch->songslist}} <a href="JavaScript:void(0)">Purchase Now</a></li>
+               
+                @endforeach
+
+
+                <!-- <li><i class="fa fa-music" aria-hidden="true"></i> BMIX 051621 BPM124 <a href="JavaScript:void(0)">Purchase Now</a></li>
                 <li><i class="fa fa-music" aria-hidden="true"></i> BMIX 051219 BPM096 <a href="JavaScript:void(0)">Purchase Now</a></li>
                 <li><i class="fa fa-music" aria-hidden="true"></i> BMIX 051721 BPM112 <a href="JavaScript:void(0)">Purchase Now</a></li>
                 <li><i class="fa fa-music" aria-hidden="true"></i> BMIX 063019 BPM138 <a href="JavaScript:void(0)">Purchase Now</a></li>
@@ -133,7 +140,7 @@
                 <li><i class="fa fa-music" aria-hidden="true"></i> BMIX 101120 BPM120 <a href="JavaScript:void(0)">Purchase Now</a></li>
                 <li><i class="fa fa-music" aria-hidden="true"></i> BMIX 101619 BPM104 <a href="JavaScript:void(0)">Purchase Now</a></li>
                 <li><i class="fa fa-music" aria-hidden="true"></i> BMIX 122919 BPM104 <a href="JavaScript:void(0)">Purchase Now</a></li>
-                <li><i class="fa fa-music" aria-hidden="true"></i> BMIX 123118 BPM098 <a href="JavaScript:void(0)">Purchase Now</a></li>
+                <li><i class="fa fa-music" aria-hidden="true"></i> BMIX 123118 BPM098 <a href="JavaScript:void(0)">Purchase Now</a></li> -->
               </ul>
           </div>
         </div>

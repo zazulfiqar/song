@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\beatmixsongs;
+use DB;
 use App\beatmix;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,8 @@ class BeatmixController extends Controller
      */
     public function index()
     {
-        return view('frontend.beatmix');
+        $data=beatmixsongs::all();
+        return view('frontend.beatmix')->with('data', $data);
     }
 
     /**

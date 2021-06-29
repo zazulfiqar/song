@@ -24,6 +24,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('betmixsongs', [BeatmixsongsController::class, 'index'])->name('betmixsongs');
+Route::get('betmixsongscreate', [BeatmixsongsController::class, 'create'])->name('betmixsongscreate');
+Route::post('betmixsongsstore', [BeatmixsongsController::class, 'store'])->name('betmixsongsstore');
+Route::get('betmixsongsdelete/{id}', [BeatmixsongsController::class, 'destroy'])->name('betmixsongsdelete');
+Route::get('betmixsongsedit/{id}', [BeatmixsongsController::class, 'show'])->name('betmixsongsedit');
+Route::post('betmixsongseditone/{id}', [BeatmixsongsController::class, 'edit'])->name('betmixsongseditone');
 
 
 

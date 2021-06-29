@@ -15,16 +15,48 @@
                 <!--<button type="button" class="slide-toggle">Slide Toggle</button> -->
                 @include('layouts.header')
                 <div class="user-dashboard">
-                    <h1>Hello,  {{ Auth::user()->name }} </h1>
-                    <div class="row">
-                        
-                        
-                    </div>
+                    <a href="{{asset('betmixsongscreate')}}" class="btn btn-dark">Add new Music</a>
+                    <div class="container">
+                        <h2>Beat Mix Music List</h2>
+    
+                        <table class="table table-hover">
+                          <thead>
+                            <tr>
+                              <th>Title</th>
+                              <th>Song</th>
+                              <th>Action</th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                              @foreach($data as $fetch)
+                                <tr>
+                                <td>{{$fetch->name}}</td>
+                                <td>{{$fetch->songslist}}</td>
+                                <td><a href="{{url('betmixsongsdelete/'.$fetch->id)}}">
+                                        <i class="fa fa-trash" aria-hidden="true" style="font-size: 20px;"></i>
+                                    </a>
+                                    <a href="{{url('betmixsongsedit/'.$fetch->id)}}">
+                                        <i class="fa fa-pencil" aria-hidden="true"  style="font-size: 20px;"></i>
+                                    </a>
+                            </td>
+                                <td></td>
+                            </tr>
+                                @endforeach
+                           
+                          </tbody>
+                        </table>
+                      </div>
                 </div>
             </div>
         </div>
 
     </div>
+
+
+
+    <!-- Modal -->
+
 
 </body>
 @endsection

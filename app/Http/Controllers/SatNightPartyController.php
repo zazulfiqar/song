@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\beatmixsongs;
 use App\sat_night_party;
 use Illuminate\Http\Request;
 
@@ -19,7 +19,8 @@ class SatNightPartyController extends Controller
 
     public function index2()
     {
-        return view('frontend.index');
+        $data=beatmixsongs::all();
+        return view('frontend.index')->with('data', $data);
     }
 
     /**

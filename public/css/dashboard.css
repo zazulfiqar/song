@@ -185,7 +185,8 @@ li,ul{
 }
 
 #navigation {
-  background: #e1e1e1;
+  background: #323232;
+  height: 700px !important;
 }
 
 #navigation {
@@ -354,29 +355,29 @@ header {
 
 .navi a {
   border-bottom: 1px solid #0d172e;
-  border-top: 1px solid #0d172e;
-  color: #2a2a2a;
-  display: block;
-  font-size: 17px;
-  font-weight: 500;
-  padding: 28px 20px;
-  text-decoration: none;
+    border-top: 1px solid #0d172e;
+    color: #ffffff;
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 28px 20px;
+    text-decoration: none;
 }
 
 .navi i {
   margin-right: 15px;
-  color: #5584ff;
+  color: #ff0000;
 }
 
 .navi .active a {
-  background: #ffffff;
-  border-left: 5px solid #5584ff;
-  padding-left: 15px;
+  background: #323232;
+    border-left: 16px solid #dd0000;
+    padding-left: 15px;
 }
 
 .navi a:hover {
   background: #ababab none repeat scroll 0 0;
-  border-left: 5px solid #000000;
+  border-left: 16px solid #000000;
   display: block;
   padding-left: 15px;
   color: black;

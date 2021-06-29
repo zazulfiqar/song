@@ -13,7 +13,7 @@
       <div class="row flexRow">
         <div class="col-md-3 col-sm-12 col-xs-12">
           <div class="main_logo">
-            <a href="index.html"><img alt="img" src="images/ezgif.gif"></a>
+            <a href="#"><img alt="img" src="{{asset('images/ezgif.gif')}}"></a>
           </div>
         </div>
         <div class="col-md-9 hidden-xs hidden-sm">

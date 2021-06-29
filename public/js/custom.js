@@ -90,6 +90,11 @@
   ]
 });
 
+
+$(document).ready(function() {
+  $('#example').DataTable();
+} );
+
 // owl-carousel script
 
 

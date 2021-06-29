@@ -126,13 +126,10 @@
 					
 					
 				<ul id="playlist" class="BeforeYouBg">
-					
-					<li track="beatmix/BMIX 051219 BPM096.mp3" cover="images/051621-cover.png" title=" BMIX 051219 BPM096"></li>					
-					<li track="beatmix/BMIX 051621 BPM124.mp3" cover="images/051621-cover.png" title="BMIX 051621 BPM124"></li>
-					<li track="beatmix/BMIX 051721 BPM112.mp3" cover="images/palyer-icon-cover.png" title="BMIX 051721 BPM112"></li>
-					<li track="beatmix/BMIX 063019 BPM138.mp3" cover="images/palyer-icon-cover.png" title="BMIX 063019 BPM138"></li>
-					<li track="beatmix/BMIX 070520 BPM136.mp3" cover="images/palyer-icon-cover.png" title="BMIX 070520 BPM136"></li>
-					<li track="beatmix/BMIX 072819 BPM106.mp3" cover="images/palyer-icon-cover.png" title=" BMIX 072819 BPM106"></li>
+					@foreach($data as $fetch)
+          <li track="{{asset('beatmixmusic/'.$fetch->songslist)}}" cover="images/051621-cover.png" title="{{$fetch->songslist}}"></li>
+          @endforeach
+				
 					
 					<!--<li track="beatmix/BMIX 101120 BPM120.mp3" cover="images/cover-img.jpg" title=" BMIX 101120 BPM120"></li>
 					<li track="beatmix/BMIX 101619 BPM104.mp3" cover="images/cover-img.jpg" title=" BMIX 101619 BPM104"></li>
