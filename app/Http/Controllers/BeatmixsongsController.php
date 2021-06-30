@@ -7,6 +7,7 @@ use App\beatmix;
 use Illuminate\Http\Request;
 use DB;
 use Session;
+use Auth;
 class BeatmixsongsController extends Controller
 {
 
@@ -28,8 +29,16 @@ class BeatmixsongsController extends Controller
      */
     public function index()
     {
-        $data=beatmixsongs::all();
-        return view('admin.beatmixsongs.index')->with('data', $data);
+        $user = \Auth::user();
+        $role=$user->role;
+        if($role=='admin'){
+            $data=beatmixsongs::all();
+            return view('admin.beatmixsongs.index')->with('data', $data);
+        }
+        else{
+            return view('home');
+        }
+       
         //
     }
 

@@ -25,10 +25,6 @@
               <li><a href="{{asset('about')}}">About Jetjams</a></li>
               <li><a href="{{asset('blog')}}">Blog</a></li>
               <li><a href="{{asset('contact.html')}}" class="gradient_btn">CONTACT US</a></li>
-
-
-
-
               <li>
 
 

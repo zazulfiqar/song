@@ -7,6 +7,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\BeatmixController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BeatmixsongsController;
+use App\Http\Controllers\SubscribedsongController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,8 @@ Route::get('betmixsongsdelete/{id}', [BeatmixsongsController::class, 'destroy'])
 Route::get('betmixsongsedit/{id}', [BeatmixsongsController::class, 'show'])->name('betmixsongsedit');
 Route::post('betmixsongseditone/{id}', [BeatmixsongsController::class, 'edit'])->name('betmixsongseditone');
 
+Route::get('subscribestore/{id}', [SubscribedsongController::class, 'store'])->name('subscribestore');
+Route::get('subscribesongs', [SubscribedsongController::class, 'index'])->name('subscribesongs');
 
 
 Route::group([

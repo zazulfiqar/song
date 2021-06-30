@@ -7,6 +7,7 @@
     <meta content=" " name="description">
     <meta content="" name="author">
     <link href="#" rel="icon">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 	 <!-- Bootstrap core CSS -->
    <!-- <link href="https://www.musetemplatespro.com/preview/codecan/musicplaylistjs/vendor/bootstrap/css/bootstrap.css" rel="stylesheet"> -->
 
@@ -122,13 +123,44 @@
                 <input type="text" placeholder="Search Here...">
                 <button><i class="fa fa-search" aria-hidden="true"></i></button>
               </form>
-              </div>
-              <ul>
 
-                @foreach($data as $fetch)
-                <li><i class="fa fa-music" aria-hidden="true"></i> {{$fetch->songslist}} <a href="JavaScript:void(0)">Purchase Now</a></li>
-               
+              </div>
+              
+              <ul>
+                
+                @php
+                $user_id= Auth::id();
+                $fetch3=App\subscribedsong::where('user_id', $user_id)->get();
+                @endphp
+
+                <?php
+
+                $ids = [];
+
+                ?>
+                @foreach($fetch3 as $fetchdata)
+
+
+                <?php $ids[$fetchdata->song_id] = 'assign';?>
+
                 @endforeach
+                @foreach($data as $fetch)
+                
+                <li>
+                  
+                  <i class="fa fa-music" aria-hidden="true"></i> {{$fetch->songslist}} 
+                    <?php if(isset($ids[$fetch->id])){?> <a>Purchased</a>
+                    <?php }else{ ?> 
+                      <a href="{{asset('subscribestore/'.$fetch->id)}}">Purchase Now</a> <?php  } ?>
+                </li>
+                @endforeach
+
+
+
+               
+
+
+                
 
 
                 <!-- <li><i class="fa fa-music" aria-hidden="true"></i> BMIX 051621 BPM124 <a href="JavaScript:void(0)">Purchase Now</a></li>
@@ -177,14 +209,14 @@
     <script src="https://www.musetemplatespro.com/preview/codecan/musicplaylistjs/vendor/jquery/jquery.min.js"></script>
     <script src="https://www.musetemplatespro.com/preview/codecan/musicplaylistjs/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
    
-    <script src="js/all.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="{{asset('js/all.js')}}"></script>
+    <script src="{{asset('js/jquery.slicknav.js')}}"></script>
+    <script src="{{asset('js/custom.js')}}"></script>
 	
 	 <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script> 
-    <script src="js/scrolling-nav.js"></script>
-    <script src="js/musicPlaylist.min.js"></script> 
-   <script src="js/player-js.js"></script>
+    <script src="{{asset('js/jquery.easing.min.js')}}"></script> 
+    <script src="{{asset('js/scrolling-nav.js')}}"></script>
+    <script src="{{asset('js/musicPlaylist.min.js')}}"></script> 
+   <script src="{{asset('js/player-js.js')}}"></script>
   </body>
 </html>
