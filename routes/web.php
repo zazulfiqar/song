@@ -33,7 +33,8 @@ Route::post('betmixsongseditone/{id}', [BeatmixsongsController::class, 'edit'])-
 
 Route::get('subscribestore/{id}', [SubscribedsongController::class, 'store'])->name('subscribestore');
 Route::get('subscribesongs', [SubscribedsongController::class, 'index'])->name('subscribesongs');
-
+Route::get('paypal/{id}', array('as' => 'paypal','uses' => 'PayPalController@postPaymentWithpaypal',));
+Route::get('paypal', array('as' => 'status','uses' => 'PayPalController@getPaymentStatus',));
 
 Route::group([
     'prefix' => 'admin',
@@ -80,3 +81,4 @@ Route::get('sat_night', [SatNightPartyController::class, 'index'])->name('sat_ni
 Route::get('blog', [BlogController::class, 'index'])->name('blog');
 Route::get('beatmixx', [BeatmixController::class, 'index'])->name('beatmixx');
 Route::get('about', [AboutController::class, 'index'])->name('about');
+

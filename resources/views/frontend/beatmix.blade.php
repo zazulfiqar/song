@@ -124,6 +124,22 @@
                 <button><i class="fa fa-search" aria-hidden="true"></i></button>
               </form>
 
+              @if ($message = Session::get('success'))
+              <div class="custom-alerts alert alert-success fade in">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+                  {!! $message !!}
+              </div>
+              <?php Session::forget('success');?>
+              @endif
+
+              @if ($message = Session::get('error'))
+              <div class="custom-alerts alert alert-danger fade in">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+                  {!! $message !!}
+              </div>
+              <?php Session::forget('error');?>
+              @endif
+
               </div>
               
               <ul>
@@ -151,7 +167,7 @@
                   <i class="fa fa-music" aria-hidden="true"></i> {{$fetch->songslist}} 
                     <?php if(isset($ids[$fetch->id])){?> <a>Purchased</a>
                     <?php }else{ ?> 
-                      <a href="{{asset('subscribestore/'.$fetch->id)}}">Purchase Now</a> <?php  } ?>
+                      <a href="{{asset('paypal/'.$fetch->id)}}">Purchase Now</a> <?php  } ?>
                 </li>
                 @endforeach
 
